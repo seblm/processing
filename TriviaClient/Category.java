@@ -1,3 +1,5 @@
+import processing.core.PApplet;
+
 public enum Category {
 
   POP(200, 67, 67),
@@ -13,6 +15,10 @@ public enum Category {
     this.red = red;
     this.green = green;
     this.blue = blue;
+  }
+
+  public void fill(PApplet context) {
+    context.fill(red, green, blue);
   }
 
   public static Category fromIndex(int index) {
