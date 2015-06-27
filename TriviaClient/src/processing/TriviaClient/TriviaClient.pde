@@ -7,6 +7,7 @@ private Game game;
 
 @Override
 void setup() {
+  println(System.getProperty("java.version"));
   size(WIDTH, HEIGHT);
   noLoop();
   smooth();
