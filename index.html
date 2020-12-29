@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- source: https://getbootstrap.com/docs/5.0/examples/album -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>p5.js gallery</title>
+    <link rel="canonical" href="https://seblm.github.io/processing">
+    <link href="lib/bootstrap-5.0.0-beta1/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .p5js {
+        background-color: #ed225d;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar-dark shadow-sm p5js">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>p5.js gallery</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">my p5.js gallery</h1>
+            <p class="lead text-muted">Each of my p5.js programs ultimately goes here. You can enjoy browsing my work and see source code to get inspired.</p>
+            <p>
+              <a href="#gallery" class="btn btn-primary my-2">See all examples</a>
+              <a href="https://github.com/seblm/processing" class="btn btn-secondary my-2">Show source code</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div id="gallery" class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="child-puzzle/assets/capture.png" class="card-img-top" alt="a child puzzle">
+
+              <div class="card-body">
+                <p class="card-text">A puzzle to help children masterize mouse. Each 3x3 tile should be clicked to reveal one of three images.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-sm btn-outline-secondary" href="child-puzzle">View</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="https://github.com/seblm/processing/blob/main/child-puzzle/sketch.js">Code</a>
+                  </div>
+                  <small class="text-muted">2020-12-29</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+    <script src="lib/bootstrap-5.0.0-beta1/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
