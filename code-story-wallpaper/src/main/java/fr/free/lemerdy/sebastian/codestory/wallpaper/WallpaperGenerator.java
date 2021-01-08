@@ -3,6 +3,7 @@ package fr.free.lemerdy.sebastian.codestory.wallpaper;
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
+import processing.event.KeyEvent;
 
 /**
  * Generates Code Story wallpaper from <ol>
@@ -25,14 +26,12 @@ public class WallpaperGenerator extends PApplet {
     private String inputText;
 
     @Override
-    public boolean sketchFullScreen() {
-        return true;
+    public void settings() {
+        fullScreen();
     }
 
     @Override
     public void setup() {
-        sketchPath = System.getProperty("user.home");
-
         size(displayWidth, displayHeight);
         smooth();
 
@@ -42,8 +41,8 @@ public class WallpaperGenerator extends PApplet {
         codeWidth = (int) (displayWidth * .8);
         codeHeight = codeWidth * img.height / img.width;
 
-        paddingLeft = (width - codeWidth) / 2;
-        paddingTop = (height - codeHeight) / 2;
+        paddingLeft = (width - codeWidth) >> 1;
+        paddingTop = (height - codeHeight) >> 1;
 
         noLoop();
 
@@ -84,8 +83,6 @@ public class WallpaperGenerator extends PApplet {
         }
 
         sign();
-
-        saveFrame("codestory-wallpaper.png");
     }
 
     private int getColorFromImage(float x, float y) {
@@ -115,6 +112,14 @@ public class WallpaperGenerator extends PApplet {
         fill(235);
         textAlign(RIGHT);
         text("the power of refactoring", paddingLeft + codeWidth - 4, codeHeight + paddingTop + 20);
+    }
+
+    @Override
+    public void keyPressed(KeyEvent event) {
+        super.keyPressed(event);
+        if (event.getKey() == 's') {
+            saveFrame("codestory-wallpaper.png");
+        }
     }
 
     public static void main(String... args) {
