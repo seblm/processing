@@ -1,4 +1,4 @@
-package name.lemerdy.sebastian.triviaclient; // TODO ajouter la déclaration du package
+package name.lemerdy.sebastian.triviaclient;
 
 import com.sun.net.httpserver.HttpServer;
 import java.io.BufferedReader;

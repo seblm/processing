@@ -1,8 +1,8 @@
-package name.lemerdy.sebastian.triviaclient; // TODO ajouter/supprimer le package
+package name.lemerdy.sebastian.triviaclient;
 
-import processing.core.PApplet; // TODO ajouter cet import
+import processing.core.PApplet;
 
-public class TriviaClient extends PApplet { // TODO ajouter/supprimer cette déclaration
+public class TriviaClient extends PApplet {
 
   private final int WIDTH = 640;
   private final int HEIGHT = 480;
@@ -12,15 +12,19 @@ public class TriviaClient extends PApplet { // TODO ajouter/supprimer cette déc
   private Game game;
 
   @Override
-  public void setup() { // <- TODO ajouter public devant "void setup() {"
+  public void settings() {
     size(WIDTH, HEIGHT);
+  }
+
+  @Override
+  public void setup() {
     noLoop();
     smooth();
     game = new Game();
   }
 
   @Override
-  public void draw() { // <- TODO ajouter public devant "void draw() {"
+  public void draw() {
     drawBoard();
     drawDeck();
     EventsListener.handleEvents(this).start();
@@ -84,4 +88,4 @@ public class TriviaClient extends PApplet { // TODO ajouter/supprimer cette déc
     rotate(-angle / 2);
   }
 
-} // TODO ajouter cette fin d'accolade
+}
